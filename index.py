@@ -17,8 +17,8 @@ with ui.header().classes('items-center') as header:
     
 with ui.column().classes('items-center self-center') as body:
     with html.article() as article1:
-        ui.html('<h3>Article 1</h3>')
-        html.p('Like with any other element, you can add classes, style, props, tooltips and events. One convenience is that the keyword arguments are automatically added to the elements props dictionary.')
+        ui.html('<h3>Articulo 1</h3>')
+        html.p('Contenido de este articulo')
     
     with html.article() as article2:
         ui.html('<h3>Article 2</h3>')

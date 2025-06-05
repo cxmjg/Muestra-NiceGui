@@ -14,7 +14,7 @@ with ui.row() as principal:
         ui.menu_item('Menu item 2')
         ui.menu_item('Menu item 3')
 
-    with ui.column() as contenido:
+    with ui.column().props('aria-label="Contenido principal" role="document"') as contenido:
         html.h1('Contenido del sitio')
         
         with html.article() as article:

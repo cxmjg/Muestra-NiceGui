@@ -1,14 +1,12 @@
-from nicegui import ui
+from nicegui import html, ui
 
-columns = [
-    {'name': 'name', 'label': 'Name', 'field': 'name', 'required': True, 'align': 'left'},
-    {'name': 'age', 'label': 'Age', 'field': 'age', 'sortable': True},
-]
-rows = [
-    {'name': 'Alice', 'age': 18},
-    {'name': 'Bob', 'age': 21},
-    {'name': 'Carol'},
-]
-ui.table(columns=columns, rows=rows, row_key='name')
+with ui.header() as cabecera:
+    html.h1('Sitio de prueba').style('font-size: xx-large; font-weight: bolder; font-family: monospace;')
 
-ui.run()
+
+with html.section().classes('self-center') as contenido:
+    with html.article().classes('bg-blue-200 p-2') as article1:
+        ui.html('<h3>Articulo 1</h3>').classes('font-bold')
+        html.p('Contenido de este articulo')
+
+ui.run(port=8181, host='0.0.0.0')
